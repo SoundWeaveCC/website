@@ -1,0 +1,61 @@
+// Feedback Modal (Formspree Version)
+#feedbackModal.modal.fade(tabindex='-1', aria-labelledby='feedbackModalLabel', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header.bg-gradient-primary-to-secondary.p-4
+                h5#feedbackModalLabel.modal-title.font-alt.text-white Send feedback
+                button.btn-close.btn-close-white(type='button' data-bs-dismiss='modal', aria-label='Close')
+            .modal-body.border-0.p-4
+
+                // * * * * * * * * * * * * * * *
+                // * * Formspree Contact Form * *
+                // * * * * * * * * * * * * * * *
+
+                // Replace YOUR_FORMSPREE_ID with your actual Formspree form ID
+                form#contactForm(action='https://formsubmit.co/095ae324ad8618d1b33abfa725e690a4', method='POST')
+
+                    // Name input
+                    .form-floating.mb-3
+                        input#name.form-control(
+                            type='text',
+                            name='name',
+                            placeholder='Enter your name...',
+                            required
+                        )
+                        label(for='name') Full name
+                    
+                    // Email address input
+                    .form-floating.mb-3
+                        input#email.form-control(
+                            type='email',
+                            name='email',
+                            placeholder='name@example.com',
+                            required
+                        )
+                        label(for='email') Email address
+                    
+                    // Phone number input
+                    .form-floating.mb-3
+                        input#phone.form-control(
+                            type='tel',
+                            name='phone',
+                            placeholder='(123) 456-7890'
+                        )
+                        label(for='phone') Phone number
+                    
+                    // Message input
+                    .form-floating.mb-3
+                        textarea#message.form-control(
+                            name='message',
+                            placeholder='Enter your message here...',
+                            style='height: 10rem;',
+                            required
+                        )
+                        label(for='message') Message
+
+                    // Formspree will handle success/error messages
+                    // You can customize these in your Formspree dashboard
+
+                    // Submit Button
+                    .d-grid
+                        button.btn.btn-primary.rounded-pill.btn-lg(type='submit') Submit

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 * Start Bootstrap - New Age v6.0.7 (https://startbootstrap.com/theme/new-age)
-* Copyright 2013-2023 Start Bootstrap
+* Copyright 2013-2025 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-new-age/blob/master/LICENSE)
 */
 /*!
@@ -11159,4 +11159,23 @@ footer a:hover, footer a:active, footer a:focus {
   .masthead .masthead-device-mockup .device-wrapper {
     max-width: 17rem;
   }
+}
+
+/* 图片容器样式（控制大小和定位） */
+.image-container {
+  position: relative;
+  max-width: 100%; /* 根据布局调整 */
+  margin: 0 auto; /* 居中 */
+}
+
+/* 图片边缘渐变融入背景 */
+.blending-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* 轻微圆角 */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* 可选：轻微阴影增强层次感 */
+  /* 边缘渐变遮罩（关键步骤） */
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
 }
